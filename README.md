@@ -8,7 +8,7 @@ Note: Make sure the Docker is installed
 
 Run mysql container
 ```bash
-docker run --name django-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -p 3306:3306 -d mysql
+docker run --name django-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -e MYSQL_DATABASE=clinicalsdb -p 3306:3306 -d mysql
 ```
 
 Build the app

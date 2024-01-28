@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  mysql:
+    image: mysql
+    container_name: django-mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+      MYSQL_DATABASE: clinicalsdb
+
+  app:
+    build:
+      dockerfile: Dockerfile-compose
+    container_name: clinicals_app
+    command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    restart: always
+    ports:
+      - 8000:8000
+    depends_on:
+      - mysql

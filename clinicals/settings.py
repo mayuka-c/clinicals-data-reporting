@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'clinicalsdb',
         'USER': 'root',
         'PASSWORD': 'my-secret-pw',
-        'HOST': '127.0.0.1'
+        'HOST': 'django-mysql'
     }
 }
 

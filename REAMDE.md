@@ -1,1 +1,0 @@
-# Clinicals Data Reporting App using Django

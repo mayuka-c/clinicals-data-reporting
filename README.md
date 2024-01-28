@@ -4,7 +4,7 @@
  
 Note: Make sure the Docker is installed
 
-### Using docker
+### ***Using docker***
 
 Run mysql container
 ```bash
@@ -21,7 +21,7 @@ docker exec -it clinicals_app python manage.py migrate
 Run the app
 - Open the url `localhost:10111` in the browser
 
-### Using docker compose
+### ***Using docker compose***
 ```bash
 docker-compose up
 ```

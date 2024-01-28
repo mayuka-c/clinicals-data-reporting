@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>ClinicalData Report</title>
+        <link rel="stylesheet" href="{% static "css/clinicals.css" %}">
+    </head>
+    <body>
+        <h1>ClinicalData Report:</h1>
+        <table border="2">
+            <thead>
+                <th>Component Name</th>
+                <th>Component Value</th>
+                <th>Measure Date and Time</th>
+            </thead>
+            {% for item in data %}
+            <tr>
+                <td>{{ item.componentName }}</td>
+                <td>{{ item.componentValue }}</td>
+                <td>{{ item.measuredDateTime }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/">Home Page</a>
+    </body>
+</html>
